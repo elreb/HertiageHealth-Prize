@@ -19,6 +19,30 @@ By: Robert Brown
 
 </center>
 
+```{r message=FALSE}
+# List of packages required for this analysis
+pkg <- c("tidyverse", "stringr",  "magrittr", "devtools", "multidplyr", 
+         "parallel", "RPostgreSQL", "gbm")
+
+# Check if packages are not installed and assign the
+# names of the packages not installed to the variable new.pkg
+new.pkg <- pkg[!(pkg %in% installed.packages())]
+
+# If there are any packages in the list that aren't installed,
+# install them
+if (length(new.pkg)) {
+  install.packages(new.pkg, repos = "http://cran.rstudio.com")
+}
+
+lapply(pkg, library, character.only = TRUE)
+
+devtools::install_github("hadley/multidplyr")
+```
+
+
+
+
+
 ``` r
 #password stored in other file
 source("D:\\Bdrive\\School\\Dropbox Drop\\MPH\\MPH-Spring_2017\\PH290.9-Big_Data\\PH290.9-Project\\PH290.9-P1\\HHP_release3\\database_pw.R")
