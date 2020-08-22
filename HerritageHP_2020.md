@@ -254,9 +254,11 @@ claims_per_member_nest <- Claims %>%
 
 
 
-```{r, eval=FALSE}
-#Used the following sql commands to generate postgres database to generate data 
 
+# Moving over to SQL 
+I used the following sql commands to generate Postgres database to clean, join and summarize the data.
+
+```{r, eval=FALSE}
 /**************************
 load in the raw data
 **************************/
