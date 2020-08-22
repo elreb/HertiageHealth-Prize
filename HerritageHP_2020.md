@@ -205,6 +205,7 @@ for (i in all_dfs_list) {
     ## $ DaysInHospital  <int> 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, ...
     ## $ DaysInHospitalB <int> 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, ...
 
+# Using R to process and create summary tables
 
 ```{r eval=FALSE}
 #dplyr getting bogged down 
@@ -223,7 +224,7 @@ claims_per_member_nest <- Claims %>%
 
 ```
 
-
+### Attempting to parallelize job over cores to see if there is a increase in processing speed
 
 ```{r eval=FALSE}
 #Attempting to parallelize across multiple cores
@@ -256,7 +257,7 @@ claims_per_member_nest <- Claims %>%
 
 
 # Moving over to SQL 
-I used the following sql commands to generate Postgres database to clean, join and summarize the data.
+I used the following sql commands to generate a Postgres database. Also, the data is cleaned, joined and summarized in SQL.
 
 ```{r, eval=FALSE}
 /**************************
